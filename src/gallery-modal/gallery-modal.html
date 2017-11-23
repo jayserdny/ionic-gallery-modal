@@ -1,12 +1,28 @@
+<ion-header>
+
+  <ion-navbar>
+
+    <ion-buttons start mode="ios">
+      <button class="close-button" ion-button icon-only (click)="dismiss()">
+        <ion-icon name="{{ closeIcon }}"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title></ion-title>
+    <ion-buttons end>
+      <button class="close-button" ion-button icon-only (click)="dismiss()">
+        <ion-icon name="{{ closeIcon }}"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
 <ion-content class="gallery-modal"
   no-bounce
   [ngStyle]="modalStyle"
   (window:resize)="resize($event)"
   (window:orientationchange)="orientationChange($event)"
 >
-  <button class="close-button" ion-button icon-only (click)="dismiss()">
-    <ion-icon name="{{ closeIcon }}"></ion-icon>
-  </button>
 
   <!-- Initial image while modal is animating -->
   <div class="image-on-top" [hidden]="sliderLoaded">
