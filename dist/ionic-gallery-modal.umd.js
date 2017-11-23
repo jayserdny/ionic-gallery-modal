@@ -752,6 +752,9 @@ var GalleryModalModule = (function () {
                     entryComponents: [
                         GalleryModal,
                     ],
+                    schemas: [
+                        core.CUSTOM_ELEMENTS_SCHEMA
+                    ],
                 },] },
     ];
     /**
