@@ -2,6 +2,7 @@ import { Component, ViewChild, OnInit, ElementRef } from '@angular/core';
 import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
 import { ViewController, NavParams, Slides, Platform } from 'ionic-angular';
 import { Photo } from '../interfaces/photo-interface';
+import { Options } from '../interfaces/options-interface';
 import { Subject } from 'rxjs/Subject';
 
 @Component({
@@ -15,6 +16,7 @@ export class GalleryModal implements OnInit {
   private initialImage: any;
 
   public photos: Photo[];
+  private options: Options;
   private sliderDisabled: boolean = false;
   private initialSlide: number = 0;
   private currentSlide: number = 0;
@@ -41,6 +43,7 @@ export class GalleryModal implements OnInit {
 
   constructor(private viewCtrl: ViewController, params: NavParams, private element: ElementRef, private platform: Platform, private domSanitizer: DomSanitizer) {
     this.photos = params.get('photos') || [];
+    this.options = params.get('options') || { hasPagination: false, paginationType: null };
     this.closeIcon = params.get('closeIcon') || 'arrow-back';
     this.initialSlide = params.get('initialSlide') || 0;
 

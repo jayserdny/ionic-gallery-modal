@@ -31,7 +31,7 @@
     (panend)="panEndEvent($event)"
     (pancancel)="panEndEvent($event)"
   >
-    <ion-slide *ngFor="let photo of photos;">
+    <ion-slide *ngFor="let photo of photos;" [pager]="options.hasPagination" [paginationType]="options.paginationType">
       <zoomable-image
         [photo]="photo"
         [resizeTriggerer]="resizeTriggerer"
