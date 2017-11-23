@@ -1,4 +1,4 @@
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import { NgModule, ModuleWithProviders, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicPageModule } from 'ionic-angular';
 
@@ -32,6 +32,9 @@ import { GalleryModalHammerConfig } from './overrides/gallery-modal-hammer-confi
   ],
   entryComponents: [
     GalleryModal,
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ],
 })
 export class GalleryModalModule {}
