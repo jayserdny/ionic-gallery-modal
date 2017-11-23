@@ -753,7 +753,7 @@ var GalleryModalModule = (function () {
                         GalleryModal,
                     ],
                     schemas: [
-                        core.CUSTOM_ELEMENTS_SCHEMA
+                        core.NO_ERRORS_SCHEMA
                     ],
                 },] },
     ];

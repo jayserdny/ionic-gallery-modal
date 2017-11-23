@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, Component, Directive, ElementRef, EventEmitter, Input, NgModule, Output, ViewChild } from '@angular/core';
+import { Component, Directive, ElementRef, EventEmitter, Input, NO_ERRORS_SCHEMA, NgModule, Output, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Gesture, IonicPageModule, NavParams, Platform, ViewController } from 'ionic-angular';
 import { DomSanitizer, HammerGestureConfig } from '@angular/platform-browser';
@@ -753,7 +753,7 @@ var GalleryModalModule = (function () {
                         GalleryModal,
                     ],
                     schemas: [
-                        CUSTOM_ELEMENTS_SCHEMA
+                        NO_ERRORS_SCHEMA
                     ],
                 },] },
     ];
